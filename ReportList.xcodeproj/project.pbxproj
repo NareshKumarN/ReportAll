@@ -226,7 +226,7 @@
 				3E779816224C481000B7F578 /* Frameworks */,
 				3E779817224C481000B7F578 /* Resources */,
 				D4D3F03CE2E748BCB60D99C1 /* [CP] Copy Pods Resources */,
-				D402A2CC810A109038219054 /* [CP] Embed Pods Frameworks */,
+				EB94A3C3192274DD610F8A0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,23 +287,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D402A2CC810A109038219054 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReportList/Pods-ReportList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReportList/Pods-ReportList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReportList/Pods-ReportList-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D4D3F03CE2E748BCB60D99C1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +302,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReportList/Pods-ReportList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB94A3C3192274DD610F8A0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReportList/Pods-ReportList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReportList/Pods-ReportList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReportList/Pods-ReportList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8D7FF32C7F20C59B5DD19FD /* [CP] Check Pods Manifest.lock */ = {

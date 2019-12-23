@@ -7,6 +7,6 @@ target 'ReportList' do
 
   # Pods for ReportList
   pod 'GoogleMaps'
-  pod 'IHProgressHUD'
+  pod 'JGProgressHUD'
 
 end
