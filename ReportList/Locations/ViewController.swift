@@ -118,16 +118,18 @@ extension ViewController: CLLocationManagerDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, zoom: 17.0)
         
         self.mapView?.animate(to: camera)
-        
-        //Finally stop updating location otherwise it will come again and again in this delegate
-        self.locationManager.stopUpdatingLocation()
-        
+
+//        self.locationManager.stopUpdatingLocation()
     }
 
 }
 
 extension ViewController: GMSMapViewDelegate {
-    
+
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        self.locationManager.startUpdatingLocation()
+        return true
+    }
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         self.helperView.isHidden = true
         view.endEditing(true)
@@ -176,7 +178,9 @@ extension ViewController: GMSMapViewDelegate {
 
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.locationManager.stopUpdatingLocation()
         guard let text = searchBar.text, text.count > 2 else { return }
+        searchBar.resignFirstResponder()
         CLGeocoder().geocodeAddressString(text) { (placeMarks, error) in
             if let _ = error {
                 return
